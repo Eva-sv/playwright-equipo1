@@ -27,11 +27,11 @@ class ProductsPage:
     def verify_products_url(self):
         expect(self.page).to_have_url(self.url)
 
-    def filter_by_palas(self):
-        self.page.get_by_role("searchbox", name="Nombre").fill("palas")
+    #def filter_by_palas(self):
+        #self.page.get_by_role("searchbox", name="Nombre").fill("palas")
 
-    def click_product_to_the_cart(self):
-         self.page.get_by_role("button", name="Añadir Juego de Palas al").click()
+   # def click_product_to_the_cart(self):
+        # self.page.get_by_role("button", name="Añadir Juego de Palas al").click()
 
     def click_cart_page(self):
         self.page.get_by_role("link", name="Carrito de compra").click()
@@ -66,8 +66,9 @@ class ProductsPage:
 
     def adds_product_to_cart(self, product_name):
         self.page.get_by_role("button", name=f"Añadir {product_name} al carrito").click()
+        
     
-    #
+ 
     def verify_filtered_product(self, product_name):
         expect(self.page.get_by_text(product_name)).to_be_visible()
     

@@ -1,5 +1,5 @@
 from playwright.sync_api import Page, expect
-from pages.contacto_page import ContactPage
+from pages.contact_page import ContactPage
 
 
 def test_submit_form_empty_required_message(page: Page):
